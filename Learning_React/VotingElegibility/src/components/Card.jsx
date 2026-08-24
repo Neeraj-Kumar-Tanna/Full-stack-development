@@ -2,14 +2,14 @@ import React from 'react'
 
 const Card = (props) => {
     console.log(props.id);
-    function eligible(age){
-        console.log(document.getElementById(`${props.id}`));
-        if(props.age >= 18){
-            document.getElementById(props.id).style.background = "green";
-        }
-        else{
-            document.getElementById(props.id).style.background = "red";
-        }
+    function eligible(){
+        props.age >= 18 ? document.getElementById(props.id).style.background = "green" : document.getElementById(props.id).style.background = "red";
+        // if(props.age >= 18){
+        //     document.getElementById(props.id).style.background = "green";
+        // }
+        // else{
+        //     document.getElementById(props.id).style.background = "red";
+        // }
     }
   return (
     <div id={props.id} className='flex flex-col py-3 px-5 bg-amber-50 w-30 justify-between items-center'>
