@@ -1,9 +1,11 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <div>
-      <h1 className='h-50 w-50 bg-amber-700'>hiii...</h1>
+      <Navbar name="Neeraj Tanna" options={["home" , "followers" , "reels" , "explore"]} />
+      <Navbar name="vaishnav naroju" options={["abcd" , "efgh" , "ijkl" , "mnop" , "qrst" , "uvwx" , "yz"]} />
     </div>
   )
 }
