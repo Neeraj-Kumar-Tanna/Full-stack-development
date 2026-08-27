@@ -1,43 +1,71 @@
 import React, { useState } from 'react'
 
 const App = () => {
-
-  let [tasks , setTasks] = useState(["play" , "read" , "write" , "code"]);
-
-  function addTask(name){
-    // event.preventDefault();
-    setTasks([...tasks , name]);
-    
+  function submitHandler(e){
+    e.preventDefault();
+    setUsers([...users , {name , number}]);
+    setName('');
+    setNumber('');
+    console.log(users);
   }
 
-  function delete_(ind){
-    let newTasks = tasks.filter((ele, index)=> index!=ind);
-    setTasks(newTasks);
+  function modifyname(name){
+    setName(name);
   }
+
+  function modifyNumber(num){
+    setNumber(num);
+  }
+
+  const [name , setName] = useState('');
+  const [number , setNumber] = useState('');
+  const [users , setUsers] = useState([]);
 
   return (
     <div>
-      <form action="" className='mt-3 ml-3 border-amber-600 flex flex-col w-fit '>
-        <input id='task' type="text" placeholder='Enter Task' className ='py-0.5 px-3 bg-green-600 mr-5 rounded-lg ' />
-        <input onClick={(event)=>{
-          event.preventDefault();
-          addTask(document.querySelector("#task").value);
-        }} type="submit" value="Add task" className='mt-2 mb-2 w-20 bg-red-600 py-0.5 px-2 rounded-2xl font-semibold'/>
+      <form className='border border-slate-400 p-1 m-2 flex flex-col w-fit gap-2 bg-[#FFFFFF] '
+      onSubmit={(e)=>{
+        submitHandler(e);
+      }} >
+
+        <input type="text" 
+        placeholder='Enter Name'
+        required
+        className='bg-[#F8FAFC] text-[#1E293B] border border-[#CBD5E1] ' 
+        value={name}
+        onChange={(e)=>{
+          modifyname(e.target.value);
+        }}
+        />
+
+        <input type="number"  placeholder='Phone number'
+        required
+        className='bg-[#F8FAFC] text-[#1E293B] border border-[#CBD5E1] '
+        value={number}
+        onChange={(e)=>{
+          modifyNumber(e.target.value);
+        }}
+        />
+
+        <input type="submit" value="Add"
+        className='bg-[#2563EB] text-[#FFFFFF] rounded-2xl' 
+        
+        />
       </form>
 
-      <div className='p-2 rounded-2xl text-white bg-[#3b2726] w-fit ml-2 flex flex-col items-center'>
-        <h1>Tasks ToDo</h1>
-        {
-          tasks.map((ele,ind)=>{
-            return <div className='m-2 bg-[#246291] flex items-center px-2 py-1 justify-between '>
-              <h2 >{ele}</h2>
-              <button className='bg-red-600 px-1 rounded ml-3' 
-              onClick={()=>{
-                delete_(ind)
-              }}>Delete</button>
-            </div>
-          })
-        }
+      <div className='p-2 m-2 border border-[#E2E8F0] '>
+        <h1 className='font-semibold text-[#1E293B] '>contacts</h1>
+        <ol className='border-[#E2E8F0] p-2 '>
+          {
+            users.map((ele)=>{
+              return <li className='border border-[#E2E8F0]  bg-[#FFFFFF] w-30 m-1 p-1 rounded-lg'>
+                <h3 className='text-[#0F172A]'>{ele['name']}</h3>
+                <p className='text-[#64748B]'>{ele['number']}</p>
+
+              </li>
+            })
+          }
+        </ol>
       </div>
     </div>
   )
