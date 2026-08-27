@@ -34,7 +34,7 @@ const App = () => {
               <button className='bg-red-600 px-1 rounded ml-3' 
               onClick={()=>{
                 delete_(ind)
-              }}>Delete</button>
+              }}>delete</button>
             </div>
           })
         }
