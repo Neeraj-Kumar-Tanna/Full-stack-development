@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 
 const App = () => {
+
+  let [users , setUsers] = useState(JSON.parse(localStorage.getItem("usersData")));
+  const [name , setName] = useState('');
+  const [number , setNumber] = useState('');
+
+  
   function submitHandler(e){
     e.preventDefault();
-    setUsers([...users , {name , number}]);
+    let temp = users;
+    temp.push({name , number})
+    // setUsers([...users , {name , number}]);
+    setUsers(users , temp);
+    localStorage.setItem('usersData' , JSON.stringify(temp));
+
     setName('');
     setNumber('');
-    console.log(users);
   }
 
   function modifyname(name){
@@ -17,9 +27,16 @@ const App = () => {
     setNumber(num);
   }
 
-  const [name , setName] = useState('');
-  const [number , setNumber] = useState('');
-  const [users , setUsers] = useState([]);
+  function deleteUser(ind){
+    // let newUs = users.filter((ele , indx)=> ind!=indx);
+    // setUsers(newUs);
+    console.log(ind);
+    let temp = [...users];
+    temp.splice(ind,1);
+    setUsers(temp);
+    localStorage.setItem("usersData" , JSON.stringify(temp));
+  }
+  
 
   return (
     <div>
@@ -57,11 +74,16 @@ const App = () => {
         <h1 className='font-semibold text-[#1E293B] '>contacts</h1>
         <ol className='border-[#E2E8F0] p-2 '>
           {
-            users.map((ele)=>{
-              return <li className='border border-[#E2E8F0]  bg-[#FFFFFF] w-30 m-1 p-1 rounded-lg'>
-                <h3 className='text-[#0F172A]'>{ele['name']}</h3>
-                <p className='text-[#64748B]'>{ele['number']}</p>
-
+            users.map((ele , ind)=>{
+              return <li className='border border-[#E2E8F0]  bg-[#FFFFFF] w-30 m-1 p-1 rounded-lg' >
+                <h3 className='text-[#0F172A]' >{ele['name']}</h3>
+                <p className='text-[#64748B]'  >{ele['number']}</p>
+                <button
+                className='p-1 bg-blue-600 text-white m-1'
+                onClick={()=>{
+                  deleteUser(ind);
+                }}
+                >Delete</button>
               </li>
             })
           }
