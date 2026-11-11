@@ -1,0 +1,56 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    
+    // align-items: center;
+    margin-bottom: 1rem;
+    padding-block: 1rem;
+    padding-inline: 0.5rem;
+    gap: .6rem;
+    background-color: #4b4b4d;
+    color: white;
+    max-width: 18rem;
+    border-radius: 1rem;
+
+    .tagnames{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        p{
+            padding-inline: .4rem;
+            padding-block: .2rem;
+            border-radius: .3rem;
+            background-color: rgba(0, 0, 0, 0.427);
+        }
+    }
+
+    .image{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        img{
+        width: 14rem;
+        border-radius: 0.7rem;  
+        }
+    }
+    
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a{
+            color: #C3110C;
+        }
+    }
+}
+
+.main-content{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+}

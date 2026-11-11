@@ -1,0 +1,24 @@
+.dock{
+    // background-color: rgb(58, 52, 52);
+    backdrop-filter: blur;
+    display: flex ;
+    gap: 0.5rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon{
+    transition: all .3s;
+}
+
+.icon:hover {
+    transform: scale(1.2) translateY(-25%);
+}
+
+.icon:has(+ img:hover),
+.icon:hover + .icon {
+    transform: scale(1.1) translateY(-10%);
+}

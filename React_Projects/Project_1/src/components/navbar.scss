@@ -1,0 +1,33 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: .75rem;
+    padding-top: .25rem;
+    
+    // padding-block: 0.3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgba(36, 34, 34, 0.481);
+    backdrop-filter: blur(15px);
+    font-size: 0.8rem;
+
+    font-size: .75rem;
+    .left-side{
+        display: flex;
+        gap: 0.4rem;
+        // font-size: .75rem;
+        img{
+            height: 1rem;
+        }
+
+    }
+
+    .right-side{
+        display: flex;
+        gap: 0.4rem;
+
+        img{
+            height: 1rem;
+        }
+    }
+}

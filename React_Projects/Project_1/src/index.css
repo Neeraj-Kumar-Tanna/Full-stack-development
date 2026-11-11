@@ -1,0 +1,12 @@
+/* @import "tailwindcss"; */
+*{
+    color: white;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+
+#root{
+    position: relative;
+    overflow: hidden;
+}
