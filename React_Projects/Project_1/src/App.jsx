@@ -11,6 +11,7 @@ const App = () => {
   return (
     <div>
       <NavBar />
+      {/* Iam neeaj kuamr */}
       <Main />
       <Github />
       <NoteBook/>
