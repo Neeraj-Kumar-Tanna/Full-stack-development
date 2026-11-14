@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./App.scss"
 import Main from './components/Main'
 import NavBar from './components/NavBar'
@@ -7,20 +7,28 @@ import Github from './pages/Github'
 import NoteBook from './pages/NoteBook'
 import Pdfs from './pages/Pdfs'
 import Spotify from './pages/Spotify'
-// import Terminal from 'react-console-emulator'
-import TerminalWind from './pages/TerminalWind'
+import Wikipidia from './pages/Wikipidia'
+
 
 const App = () => {
+  const [windowopen, setWindowopen] = useState({
+   "github" : false,
+   "notebook" : false,
+   "pdf" : false,
+   "spotify" : false,
+   "wikipidia" : false
+  });
+
+
   return (
     <div>
       <NavBar />
-      {/* Iam neeaj kuamr */}
-      <Main />
-      <Github />
-      <NoteBook/>
-      <Pdfs link="/Neeraj_resume.pdf" />
-      <Spotify />
-      <TerminalWind />
+      <Main windowopen={windowopen} setWindowopen={setWindowopen} />
+      {windowopen.github &&  <Github />}
+      {windowopen.notebook && <NoteBook/>}
+      {windowopen.pdf && <Pdfs link="/Neeraj_resume.pdf" />}
+      {windowopen.spotify && <Spotify />}
+      {windowopen.wikipidia && <Wikipidia />}
     </div>
   )
 }
