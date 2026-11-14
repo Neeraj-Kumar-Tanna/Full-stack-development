@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/runtime": "^7.29.14",
     "@tailwindcss/vite": "^4.3.3",
     "axios": "^1.20.0",
     "react": "^19.2.8",
+    "react-console-emulator": "^5.0.2",
     "react-dom": "^19.2.8",
     "react-markdown": "^10.1.0",
     "react-rnd": "^10.5.3",

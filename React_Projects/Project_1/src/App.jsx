@@ -6,6 +6,9 @@ import MacTemplete from './pages/MacTemplete'
 import Github from './pages/Github'
 import NoteBook from './pages/NoteBook'
 import Pdfs from './pages/Pdfs'
+import Spotify from './pages/Spotify'
+// import Terminal from 'react-console-emulator'
+import TerminalWind from './pages/TerminalWind'
 
 const App = () => {
   return (
@@ -16,6 +19,8 @@ const App = () => {
       <Github />
       <NoteBook/>
       <Pdfs link="/Neeraj_resume.pdf" />
+      <Spotify />
+      <TerminalWind />
     </div>
   )
 }
