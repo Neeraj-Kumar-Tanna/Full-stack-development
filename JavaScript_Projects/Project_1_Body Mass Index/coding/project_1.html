@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <link rel="icon" type="image\png" href="images/icon_1.png">
+    <link rel="stylesheet" href="project_1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="heading">Body Mass Index</h1>
+        <!-- </div><div id="example"> -->
+    </header>
+    <main>
+        <div id="abc">
+            <div class="personal_details">
+                <div id="req_details">
+                    <div class="pdform">
+                        <label for="name">Enter your Name : </label>
+                        <input id="name" class="input" type="text" placeholder="Enter your name" >
+                    </div>
+                    <div class="pdform">
+                        <label for="height">Height : </label>
+                        <input id="height" class="input" type="number" min="0" placeholder="Enter your height">
+                        <select name="" id="heightUnit">
+
+                            <option value="cm">cm</option>
+                            <option value="meter">meter</option>
+                            <option value="feet">feet</option>
+                            <option value="inch">inch</option>
+
+                        </select>
+                    </div>
+
+                    <div class="pdform">
+                        <label for="weight">Weight : </label>
+                        <input id="weight"  class="input" type="number" min="0" placeholder="Enter Weight in kg">   
+                    </div>
+                </div>
+                    <!-- <br> -->
+
+                <!-- <div class="opt_details">
+                    <div class="pdform">
+                        <label for="dob">Date of Birth : </label>
+                        <input id="dob" class="input" type="date" >
+                    </div>    
+                        <!-- <br> -->
+                    <!-- <div class="pdform">   
+                        <label for="age">Enter your age : </label>
+                        <input id="age" class="input" type="number" placeholder="Enter Age" min="1" max="100">
+                    </div>    
+                    <div >
+                        <form  class="pdform" action="#">Gender : 
+                            <label >
+                                <input class="input" type="radio" name="gender" value="male"> Male
+                            </label>
+                            
+                            <label >
+                                <input class="input" type="radio" name="gender" value="female"> Female
+                            </label>
+                            <label >
+                                <input class="input" type="radio" name="gender" value="other"> Other
+                            </label>
+                        </form>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+            
+            <button id="pdSubmit">Submit</button>
+        </div>
+
+        
+
+        <div id="report">
+            <div id="display_bmi" class="report_sub">
+                <B class="rpt_heading">Yours BMI</B>
+                <div id="display_bmi_result">
+                    
+                </div>
+            </div>
+            
+            <div id="suggestion" class="report_sub">
+                <b class="rpt_heading">Suggestions</b>
+                <div id="suggestion_text">
+
+                </div>
+            
+            </div>
+       
+            
+        </div>
+    </main>
+    <footer>
+        <!-- <div id="about_developer">
+            <p>About Developer </p>
+            <div class="arrow"></div>
+        </div> -->
+        
+        
+        <ul id="abt_links">
+            <!-- <img src="/neeraj_pic1.jpg" alt=""> -->
+            <h4 id="abt_links_heading">About Developer</h4>
+            <li> <a href="https://www.linkedin.com/in/neeraj-kumar-tanna-62895b1ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " placeholder="Linkedin" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.instagram.com/_nee.raj_._?igsh=MXdxMDVneHFlOThnNg==" target="_blank">Instagram</a></li>
+            <!-- <li><a href="https://chatgpt.com/?model=auto" placeholder="Linkedin" target="_blank">Facebook</a></li>
+            <li><a href="https://gemini.google.com/app" target="_blank">Telegram</a></li> -->
+        </ul>  
+    </footer>
+
+    <script src="project_1.js"></script>
+</body>
+</html>
