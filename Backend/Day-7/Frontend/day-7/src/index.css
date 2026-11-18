@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+
+
+.students{
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.student{
+  background-color: green;
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  max-width: 15rem;
+  border-radius: .7rem;
+}
